@@ -1,0 +1,61 @@
+import numpy as np
+import random
+import json
+import statistics
+datos ={'nombre empleado': "juan perez", 'sueldo base':"1000000",}
+valores = [1,2,3,4,5,6,7,8,9,10]
+datos = statistics.geometric_mean(valores)
+bajo = min(valores)
+alto = max(valores)
+aleatorio = random.randint(300000,25000000)
+trabajadores = ["Carlos Lopez","Ana Martinez","Pedro Rodriguez","Laura Hernandes","Miguel Sanchez","Isabel Gomez","Francisco Diaz","Elena Fernandez"]
+def show_menu():
+    print("1. Asignar sueldo aleatorio")
+    print("2. Calificar sueldo")
+    print("3. Ver estadisticas")
+    print("4. Reporte de sueldo")
+    print("5. Salir de programa")
+
+def is_number():
+    while True:
+        try:
+            x = input("Ingrese una Numero: ")
+            x = int(x)
+            return x
+        except ValueError:
+            print("Error, debe ingresar un Numero, reintente nuevamente.")
+trabajadores = np.empty([10,0], dtype="object") 
+def Calificacion_de_sueldo():
+    if aleatorio < 80000:
+        print()
+while True :
+  show_menu()
+  opcion = is_number ()
+  if opcion ==1:
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+      print(trabajadores, aleatorio)
+  if  opcion ==2:
+      print("sueldo menores a $ 800.000 TOTAL: ")
+      print(aleatorio)
+      print("nombre empleado")
+      print("Sueldo superior a $2.000.000")
+      print(aleatorio)
+  if opcion == 3:
+      print()
+  if opcion == 4:
+       with open('boleta.json', 'w') as boleta_impresa:   
+         json.dump(datos,boleta_impresa)
+         print("exportado correctamente")
+  if opcion == 5:
+      print("Finalizando progama...")
+      print("Desarrollado por Sergio Peña")
+      print("Rut 20.673.449-3") 
+      break        
